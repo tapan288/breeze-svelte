@@ -26,24 +26,22 @@
     before continuing.
 </div>
 
-<!-- <form on:submit|preventDefault={submit}>
-            <div>
-                <InputLabel for="password" value="Password" />
-                <TextInput
-                    id="password"
-                    type="password"
-                    class="mt-1 block w-full"
-                    v-model="form.password"
-                    required
-                    autocomplete="current-password"
-                    autofocus
-                />
-                <InputError class="mt-2" :message="form.errors.password" />
-            </div>
+<form on:submit|preventDefault={submit}>
+    <div>
+        <InputLabel for="password" value="Password" />
+        <TextInput
+            id="password"
+            type="password"
+            classes="mt-1 block w-full"
+            bind:value={$form.password}
+            required
+            autocomplete="current-password"
+            autofocus
+        />
+        <InputError classes="mt-2" message={$form.errors.password} />
+    </div>
 
-            <div class="flex justify-end mt-4">
-                <PrimaryButton class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Confirm
-                </PrimaryButton>
-            </div>
-        </form> -->
+    <div class="flex justify-end mt-4">
+        <PrimaryButton disabled={$form.processing}>Confirm</PrimaryButton>
+    </div>
+</form>
