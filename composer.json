@@ -6,6 +6,7 @@
         "auth"
     ],
     "license": "MIT",
+    "version": "1.0.0",
     "support": {
         "issues": "https://github.com/tapan288/breeze-svelte/issues",
         "source": "https://github.com/tapan288/breeze-svelte"
