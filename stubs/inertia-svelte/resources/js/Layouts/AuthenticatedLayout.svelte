@@ -35,7 +35,7 @@
                             <!-- TODO: work on favicon -->
                             <NavLink
                                 href={route("dashboard")}
-                                active={$page.url === "/dashboard"}
+                                active={route().current("dashboard")}
                             >
                                 Dashboard
                             </NavLink>
@@ -171,15 +171,6 @@
                 </div>
             </div>
         </nav>
-
-        <!-- Page Heading -->
-        <!-- {#if $$slots.header}
-            <header class="bg-white dark:bg-gray-800 shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    <slot name="header" />
-                </div>
-            </header>
-        {/if} -->
 
         <!-- Page Content -->
         <main>

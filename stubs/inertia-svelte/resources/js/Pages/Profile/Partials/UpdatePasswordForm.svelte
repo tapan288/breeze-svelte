@@ -54,7 +54,6 @@
                 classes="mt-1 block w-full"
                 autocomplete="current-password"
             />
-            <!-- ref="currentPasswordInput" -->
 
             <InputError message={$form.errors.current_password} />
         </div>
