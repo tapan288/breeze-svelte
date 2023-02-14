@@ -1,5 +1,5 @@
 <script context="module">
-    export { default as layout } from "../../Layouts/AuthenticatedLayout.svelte";
+    export { default as layout } from "../../Layouts/GuestLayout.svelte";
 </script>
 
 <script>
@@ -43,8 +43,8 @@
         <TextInput
             id="email"
             type="email"
-            class="mt-1 block w-full"
-            v-model="form.email"
+            classes="mt-1 block w-full"
+            bind:value={$form.email}
             required
             autofocus
             autocomplete="username"
@@ -54,10 +54,7 @@
     </div>
 
     <div class="flex items-center justify-end mt-4">
-        <PrimaryButton
-            class={$form.processing ? "opacity-25" : ""}
-            disabled={$form.processing}
-        >
+        <PrimaryButton disabled={$form.processing}>
             Email Password Reset Link
         </PrimaryButton>
     </div>

@@ -31,6 +31,7 @@
     const closeModal = () => {
         confirmingUserDeletion = false;
 
+        $form.clearErrors();
         $form.reset();
     };
 </script>
@@ -82,7 +83,7 @@
 
                 <DangerButton
                     disabled={$form.processing}
-                    on:click={deleteUser}
+                    onClick={deleteUser}
                     classes="ml-3"
                 >
                     Delete Account
