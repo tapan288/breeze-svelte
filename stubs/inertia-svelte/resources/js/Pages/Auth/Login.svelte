@@ -84,6 +84,8 @@
             </Link>
         {/if}
 
-        <PrimaryButton disabled={$form.processing}>Log in</PrimaryButton>
+        <PrimaryButton disabled={$form.processing} classes="ml-4">
+            Log in
+        </PrimaryButton>
     </div>
 </form>

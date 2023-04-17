@@ -94,6 +94,8 @@
             Already registered?
         </Link>
 
-        <PrimaryButton disabled={$form.processing}>Register</PrimaryButton>
+        <PrimaryButton disabled={$form.processing} classes="ml-4">
+            Register
+        </PrimaryButton>
     </div>
 </form>
