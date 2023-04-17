@@ -3,7 +3,8 @@
     "description": "Minimal Laravel authentication scaffolding with Svelte and Tailwind.",
     "keywords": [
         "laravel",
-        "auth"
+        "auth",
+        "svelte-breeze"
     ],
     "license": "MIT",
     "support": {
@@ -14,6 +15,10 @@
         {
             "name": "Taylor Otwell",
             "email": "taylor@laravel.com"
+        },
+        {
+            "name": "Tapan Sharma",
+            "email": "tapansharma69@gmail.com"
         }
     ],
     "require": {
@@ -22,9 +27,6 @@
         "illuminate/filesystem": "^9.21|^10.0",
         "illuminate/support": "^9.21|^10.0",
         "illuminate/validation": "^9.21|^10.0"
-    },
-    "conflict": {
-        "laravel/framework": "<9.37.0"
     },
     "autoload": {
         "psr-4": {
