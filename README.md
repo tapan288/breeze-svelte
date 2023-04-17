@@ -16,7 +16,7 @@ As a typical Breeze package, this publishes authentication controllers and views
 You can install the package via composer:
 
 ```bash
-composer require tapansharma/breeze-svelte
+composer require tapansharma/breeze-svelte --dev
 ```
 
 Everything else is the same as the original Breeze package, you can either use the interactive installer or install it manually by passing the `--svelte` flag to the `php artisan breeze:install` command.
