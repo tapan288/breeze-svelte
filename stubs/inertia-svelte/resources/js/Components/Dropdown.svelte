@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { fade } from "svelte/transition";
 
     export let align = "right",
         width = "48",
@@ -56,6 +57,7 @@
 
     {#if open}
         <div
+            transition:fade={{ duration: 200 }}
             class="absolute z-50 mt-2 rounded-md shadow-lg {widthClass} {alignmentClasses()}"
             on:click={() => {
                 open = false;

@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { fade } from "svelte/transition";
 
     export let show = false,
         maxWidth = "2xl",
@@ -37,11 +38,13 @@
 
 {#if show}
     <div
+        transition:fade={{ duration: 200 }}
         class="fixed inset-0 overflow-y-auto px-4 py-6 sm:px-0 z-50"
         scroll-region
     >
         {#if show}
             <div
+                transition:fade={{ duration: 200 }}
                 class="fixed inset-0 transform transition-all"
                 on:click={close}
             >
@@ -53,6 +56,7 @@
 
         {#if show}
             <div
+                transition:fade={{ duration: 200 }}
                 class="mb-6 bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl transform transition-all sm:w-full sm:mx-auto {maxWidthClass}"
             >
                 {#if show}
