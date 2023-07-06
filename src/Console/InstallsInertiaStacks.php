@@ -268,7 +268,6 @@ trait InstallsInertiaStacks
                 'postcss' => '^8.4.18',
                 'tailwindcss' => '^3.2.1',
                 'svelte' => '^3.55.1',
-                "@sveltejs/vite-plugin-svelte" => "^2.0.2",
             ] + $packages;
         });
 
@@ -322,10 +321,6 @@ trait InstallsInertiaStacks
         $this->replaceInFile('Home', 'Dashboard', resource_path('js/Pages/Welcome.svelte'));
         $this->replaceInFile('/home', '/dashboard', app_path('Providers/RouteServiceProvider.php'));
 
-        // update package.json
-        $this->replaceInFile('"private": true,', '"private": true,
-        "type": "module",', base_path('package.json'));
-
         // Tailwind / Vite...
         copy(__DIR__ . '/../../stubs/default/resources/css/app.css', resource_path('css/app.css'));
         copy(__DIR__ . '/../../stubs/inertia-svelte/postcss.config.cjs', base_path('postcss.config.cjs'));
@@ -334,9 +329,9 @@ trait InstallsInertiaStacks
         copy(__DIR__ . '/../../stubs/inertia-svelte/vite.config.js', base_path('vite.config.js'));
         copy(__DIR__ . '/../../stubs/inertia-svelte/resources/js/app.js', resource_path('js/app.js'));
 
-        // if ($this->option('ssr')) {
-        //     $this->installInertiaVueSsrStack();
-        // }
+        if ($this->option('ssr')) {
+            $this->installInertiaSvelteSsrStack();
+        }
 
         $this->components->info('Installing and building Node dependencies.');
 
@@ -350,5 +345,14 @@ trait InstallsInertiaStacks
 
         $this->line('');
         $this->components->info('Breeze scaffolding installed successfully.');
+    }
+
+    protected function installInertiaSvelteSsrStack()
+    {
+        $this->runCommands(['php artisan ziggy:generate']);
+        copy(__DIR__ . '/../../stubs/inertia-svelte/resources/js/ssr.js', resource_path('js/ssr.js'));
+        $this->replaceInFile("refresh: true,", "refresh: true," . PHP_EOL . "            ssr: 'resources/js/ssr.js',", base_path('vite.config.js'));
+        $this->replaceInFile('vite build', 'vite build && vite build --ssr', base_path('package.json'));
+        $this->replaceInFile('/node_modules', '/bootstrap/ssr' . PHP_EOL . '/node_modules', base_path('.gitignore'));
     }
 }
