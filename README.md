@@ -21,8 +21,17 @@ composer require tapansharma/breeze-svelte --dev
 
 Everything else is the same as the original Breeze package, you can either use the interactive installer or install it manually by passing the `svelte` flag to the `php artisan breeze:install` command.
 
-## Some Known Issues
-- There's some issue with the active states of the navigation links, not really sure why it's not working.
+## SSR Support
+This package supports SSR out of the box, you can use the `--ssr` flag to install the package with SSR support.
+
+```bash
+php artisan breeze:install svelte --ssr
+```
+
+For further information about SSR, please refer to the [official documentation](https://inertiajs.com/server-side-rendering).
+
+<!-- add a horizontal row -->
+---
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/46927593/218656025-7f66a374-76a0-4de2-b766-b39d95f3e5b1.png)
