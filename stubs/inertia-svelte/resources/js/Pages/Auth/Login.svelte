@@ -1,8 +1,6 @@
-<script context="module">
-    export { default as layout } from "../../Layouts/GuestLayout.svelte";
-</script>
-
 <script>
+    import GuestLayout from "../../Layouts/GuestLayout.svelte";
+
     import { Link, useForm } from "@inertiajs/svelte";
     import InputLabel from "../../Components/InputLabel.svelte";
     import TextInput from "../../Components/TextInput.svelte";
@@ -29,63 +27,65 @@
     <title>Log in</title>
 </svelte:head>
 
-{#if status}
-    <div class="mb-4 font-medium text-sm text-green-600">
-        {status}
-    </div>
-{/if}
+<GuestLayout>
+    {#if status}
+        <div class="mb-4 font-medium text-sm text-green-600">
+            {status}
+        </div>
+    {/if}
 
-<form on:submit|preventDefault={submit}>
-    <div>
-        <InputLabel for="email" value="Email" />
+    <form on:submit|preventDefault={submit}>
+        <div>
+            <InputLabel for="email" value="Email" />
 
-        <TextInput
-            id="email"
-            type="email"
-            bind:value={$form.email}
-            required
-            autofocus
-            autocomplete="username"
-        />
+            <TextInput
+                id="email"
+                type="email"
+                bind:value={$form.email}
+                required
+                autofocus
+                autocomplete="username"
+            />
 
-        <InputError message={$form.errors.email} />
-    </div>
+            <InputError message={$form.errors.email} />
+        </div>
 
-    <div class="mt-4">
-        <InputLabel for="password" value="Password" />
+        <div class="mt-4">
+            <InputLabel for="password" value="Password" />
 
-        <TextInput
-            id="password"
-            type="password"
-            bind:value={$form.password}
-            required
-            autocomplete="current-password"
-        />
+            <TextInput
+                id="password"
+                type="password"
+                bind:value={$form.password}
+                required
+                autocomplete="current-password"
+            />
 
-        <InputError message={$form.errors.password} />
-    </div>
+            <InputError message={$form.errors.password} />
+        </div>
 
-    <div class="block mt-4">
-        <label class="flex items-center">
-            <Checkbox name="remember" bind:checked={$form.remember} />
-            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400"
-                >Remember me</span
-            >
-        </label>
-    </div>
+        <div class="block mt-4">
+            <label class="flex items-center">
+                <Checkbox name="remember" bind:checked={$form.remember} />
+                <span class="ml-2 text-sm text-gray-600 dark:text-gray-400"
+                    >Remember me</span
+                >
+            </label>
+        </div>
 
-    <div class="flex items-center justify-end mt-4">
-        {#if canResetPassword}
-            <Link
-                href={route("password.request")}
-                class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
-            >
-                Forgot your password?
-            </Link>
-        {/if}
+        <div class="flex items-center justify-end mt-4">
+            {#if canResetPassword}
+                <Link
+                    href={route("password.request")}
+                    class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                >
+                    Forgot your password?
+                </Link>
+            {/if}
 
-        <PrimaryButton disabled={$form.processing} classes="ml-4">
-            Log in
-        </PrimaryButton>
-    </div>
-</form>
+            <PrimaryButton disabled={$form.processing} classes="ml-4">
+                Log in
+            </PrimaryButton>
+        </div>
+    </form>
+</GuestLayout>
