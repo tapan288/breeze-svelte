@@ -30,8 +30,14 @@ php artisan breeze:install svelte --ssr
 
 For further information about SSR, please refer to the [official documentation](https://inertiajs.com/server-side-rendering).
 
-<!-- add a horizontal row -->
 ---
+
+# Useful Links
+- If you're new to the LIST Stack, you can [check out this introductory tutorial](https://www.youtube.com/watch?v=8Wze8o5s1Oo)
+- **Laravel-Inertia-Svelte Course**
+    - I guess you've already figured out that I'm loving this stack and I have been exploring it a lot lately, and to further improve your skills and help you get started, I have created a Udemy Course based on this stack, where we'll build multiple practical projects and learn a ton of stuff along the way.
+    - [**You can check out the Course here**](https://www.udemy.com/course/learn-laravel-with-inertiajs-and-svelte/?couponCode=68E5C4AD2EE9CAC378D1)
+
 
 ## Screenshots
 ![image](https://user-images.githubusercontent.com/46927593/218656025-7f66a374-76a0-4de2-b766-b39d95f3e5b1.png)
