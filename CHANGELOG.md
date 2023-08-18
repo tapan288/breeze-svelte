@@ -1,6 +1,79 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/breeze/compare/v1.18.2...1.x)
+## [Unreleased](https://github.com/laravel/breeze/compare/v1.23.0...1.x)
+
+## [v1.23.0](https://github.com/laravel/breeze/compare/v1.22.0...v1.23.0) - 2023-08-08
+
+- [1.x] Pest detection by [@jessarcher](https://github.com/jessarcher) in https://github.com/laravel/breeze/pull/300
+
+## [v1.22.0](https://github.com/laravel/breeze/compare/v1.21.2...v1.22.0) - 2023-08-02
+
+- [1.x] Update `[@vitejs](https://github.com/vitejs)/plugin-react` to v4 by [@parth391](https://github.com/parth391) in https://github.com/laravel/breeze/pull/298
+- [1.x] Prompts by [@jessarcher](https://github.com/jessarcher) in https://github.com/laravel/breeze/pull/295
+
+## [v1.21.2](https://github.com/laravel/breeze/compare/v1.21.1...v1.21.2) - 2023-06-21
+
+- Fix and standardise transitions by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/breeze/pull/293
+- Use appName directly from .env in <title> by [@domnantas](https://github.com/domnantas) in https://github.com/laravel/breeze/pull/292
+
+## [v1.21.1](https://github.com/laravel/breeze/compare/v1.21.0...v1.21.1) - 2023-06-16
+
+- Remove implicit form method calls by @Jacobtims in https://github.com/laravel/breeze/pull/290
+
+## [v1.21.0](https://github.com/laravel/breeze/compare/v1.20.2...v1.21.0) - 2023-05-04
+
+- Migrate to modules by @timacdonald in https://github.com/laravel/breeze/pull/246
+
+## [v1.20.2](https://github.com/laravel/breeze/compare/v1.20.1...v1.20.2) - 2023-04-16
+
+- Remove redundant form data in vue stub by @datlechin in https://github.com/laravel/breeze/pull/280
+- Add Sanctum Guard by @taylorotwell in https://github.com/laravel/breeze/commit/b010ff3f8cd8e9ae2a2023ca323fba9987157f60
+
+## [v1.20.1](https://github.com/laravel/breeze/compare/v1.20.0...v1.20.1) - 2023-03-28
+
+- Fix ref in react TextInput by @denis-n-ko in https://github.com/laravel/breeze/pull/277
+- Update `current_password` rule in ProfileController by @saade in https://github.com/laravel/breeze/pull/278
+- Fix Pest test installation for Inertia stack by @jessarcher in https://github.com/laravel/breeze/pull/279
+
+## [v1.20.0](https://github.com/laravel/breeze/compare/v1.19.2...v1.20.0) - 2023-03-20
+
+- Add opt-in TypeScript support by @jessarcher in https://github.com/laravel/breeze/pull/267
+- Uses Pest 2 by @nunomaduro in https://github.com/laravel/breeze/pull/274
+- API Stub EnsureEmailIsVerified Middleware: Remove unused function arguments in params by @raksbisht in https://github.com/laravel/breeze/pull/264
+- Prop consistency by @jessarcher in https://github.com/laravel/breeze/pull/272
+- React - Fix potential "undefined" class by @jessarcher in https://github.com/laravel/breeze/pull/271
+- React - Remove unnecessary text input wrapper by @jessarcher in https://github.com/laravel/breeze/pull/270
+- React - Fix input focusing when password update fails by @jessarcher in https://github.com/laravel/breeze/pull/269
+- React - Simplify Form Handler by @jessarcher in https://github.com/laravel/breeze/pull/268
+- Fix password-update pest tests by @mtvbrianking in https://github.com/laravel/breeze/pull/273
+
+## [v1.19.2](https://github.com/laravel/breeze/compare/v1.19.1...v1.19.2) - 2023-02-18
+
+- Improve React components by @jessarcher in https://github.com/laravel/breeze/pull/257
+- Fix input field Id in ForgotPassword.jsx by @tomdupont in https://github.com/laravel/breeze/pull/262
+
+## [v1.19.1](https://github.com/laravel/breeze/compare/v1.19.0...v1.19.1) - 2023-02-14
+
+### Changed
+
+- Remove link
+
+## [v1.19.0](https://github.com/laravel/breeze/compare/v1.18.2...v1.19.0) - 2023-02-14
+
+### Changed
+
+- Clean up route definition for Single Action Controllers by @istiak-tridip in https://github.com/laravel/breeze/pull/249
+- Add translation to placeholder in delete-user-form.blade.php by @castrohenworx in https://github.com/laravel/breeze/pull/250
+- Allowed a hardcoded string to be localized by @Wendelstein7 in https://github.com/laravel/breeze/pull/254
+- Update font and welcome page by @jessarcher in https://github.com/laravel/breeze/pull/253
+
+### Fixed
+
+- Allows to install `--pest` in Laravel 10 by @driesvints in https://github.com/laravel/breeze/pull/251
+
+### Removed
+
+- Remove unused files from stubs by @emargareten in https://github.com/laravel/breeze/pull/255
 
 ## [v1.18.2](https://github.com/laravel/breeze/compare/v1.18.1...v1.18.2) - 2023-02-02
 
