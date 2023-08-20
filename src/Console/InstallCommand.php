@@ -46,7 +46,6 @@ class InstallCommand extends Command implements PromptsForMissingInput
      */
     public function handle()
     {
-        // dd('hdcsd');
         if ($this->argument('stack') === 'svelte') {
             return $this->installInertiaSvelteStack();
         }
@@ -55,34 +54,6 @@ class InstallCommand extends Command implements PromptsForMissingInput
 
         return 1;
     }
-
-    // /**
-    //  * Interact with the user to prompt them when the stack argument is missing.
-    //  *
-    //  * @param  \Symfony\Component\Console\Input\InputInterface  $input
-    //  * @param  \Symfony\Component\Console\Output\OutputInterface  $output
-    //  * @return void
-    //  */
-    // protected function interact(InputInterface $input, OutputInterface $output)
-    // {
-    //     if ($this->argument('stack') === null && $this->option('inertia')) {
-    //         $input->setArgument('stack', 'svelte');
-    //     }
-
-    //     if ($this->argument('stack')) {
-    //         return;
-    //     }
-
-    //     $input->setArgument('stack', $this->components->choice('Which stack would you like to install?', $this->stacks));
-
-    //     $input->setOption('dark', $this->components->confirm('Would you like to install dark mode support?'));
-
-    //     if (in_array($input->getArgument('stack'), ['vue', 'react'])) {
-    //         $input->setOption('ssr', $this->components->confirm('Would you like to install Inertia SSR support?'));
-    //     }
-
-    //     $input->setOption('pest', $this->components->confirm('Would you prefer Pest tests instead of PHPUnit?'));
-    // }
 
     /**
      * Install Breeze's tests.
