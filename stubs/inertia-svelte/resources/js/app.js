@@ -3,8 +3,7 @@ import "../css/app.css";
 
 import { createInertiaApp } from "@inertiajs/svelte";
 
-const appName =
-    window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
+const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
@@ -14,5 +13,9 @@ createInertiaApp({
     },
     setup({ el, App, props }) {
         new App({ target: el, props, hydrate: true });
+    },
+    progress: {
+        color: "#4B5563",
+        showSpinner: true,
     },
 });
