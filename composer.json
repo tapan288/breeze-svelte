@@ -4,7 +4,7 @@
     "keywords": [
         "laravel",
         "auth",
-        "svelte-breeze"
+        "breeze-svelte"
     ],
     "license": "MIT",
     "support": {
@@ -22,11 +22,11 @@
         }
     ],
     "require": {
-        "php": "^8.0.2",
-        "illuminate/console": "^9.21|^10.0",
-        "illuminate/filesystem": "^9.21|^10.0",
-        "illuminate/support": "^9.21|^10.0",
-        "illuminate/validation": "^9.21|^10.0"
+        "php": "^8.1.0",
+        "illuminate/console": "^10.17",
+        "illuminate/filesystem": "^10.17",
+        "illuminate/support": "^10.17",
+        "illuminate/validation": "^10.17"
     },
     "autoload": {
         "psr-4": {
@@ -47,5 +47,9 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "phpstan/phpstan": "^1.10"
+    }
 }

@@ -2,7 +2,13 @@
 
 <p align="center">
     <a href="https://packagist.org/packages/laravel/breeze">
-        <img src="https://img.shields.io/packagist/l/laravel/breeze" alt="License">
+        <img src="https://img.shields.io/packagist/dt/tapansharma/breeze-svelte" alt="Total Downloads">
+    </a>
+    <a href="https://packagist.org/packages/tapansharma/breeze-svelte">
+        <img src="https://img.shields.io/packagist/v/tapansharma/breeze-svelte" alt="Latest Stable Version">
+    </a>
+    <a href="https://packagist.org/packages/tapansharma/breeze-svelte">
+        <img src="https://img.shields.io/packagist/l/tapansharma/breeze-svelte" alt="License">
     </a>
 </p>
 
